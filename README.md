@@ -1,5 +1,6 @@
 # MyPiano
 2020-2 LabView 프로젝트
+
 LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 
 개발 인원 - 3명
