@@ -117,8 +117,9 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 3. 건반 다중 입력
 </br>
 
-<img width="224" alt="4 피아노_다중_입력" src="https://github.com/de110/MyPiano/assets/67581448/a2bd2cba-44a0-41b7-a7d1-3bd9f699af3e">
-<img width="160" alt="4 피아노_다중_입력2" src="https://github.com/de110/MyPiano/assets/67581448/c1d8c7e0-f485-4e29-a177-5605eb8999a2">
+<img width="350" alt="4 피아노_다중_입력" src="https://github.com/de110/MyPiano/assets/67581448/a2bd2cba-44a0-41b7-a7d1-3bd9f699af3e">
+</br>
+<img width="200" alt="4 피아노_다중_입력2" src="https://github.com/de110/MyPiano/assets/67581448/c1d8c7e0-f485-4e29-a177-5605eb8999a2">
 
       - Local variable로 피아노 키보드의 bool값을 받아오고 하나의 배열로 만든다.
       - bool 배열은 풀업(PULL-UP)형태로 되어 있어서 not을 통해 건반을 누른 부분을 True로 만든다.
@@ -129,8 +130,8 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 
 4. 볼륨
 </br>
-<img width="119" alt="5 로터리_스위치1" src="https://github.com/de110/MyPiano/assets/67581448/74359366-3334-40fa-8293-5e4a637d7415">
-<img width="160" alt="5 로터리_스위치2" src="https://github.com/de110/MyPiano/assets/67581448/615f4ece-3bee-4947-a464-6f625105fe7a">
+<img width="220" alt="5 로터리_스위치1" src="https://github.com/de110/MyPiano/assets/67581448/74359366-3334-40fa-8293-5e4a637d7415">
+<img width="230" alt="5 로터리_스위치2" src="https://github.com/de110/MyPiano/assets/67581448/615f4ece-3bee-4947-a464-6f625105fe7a">
 
       - 로터리 음량 스위치로 받아온 값을 volume에 넣어준다. 값은 다음과 같다.
 
@@ -141,7 +142,7 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 
 5. 댐퍼 페달
     </br>
-<img width="361" alt="6 댐퍼" src="https://github.com/de110/MyPiano/assets/67581448/5ad96b77-bebd-4308-8d4c-755501843e56">
+<img width="450" alt="6 댐퍼" src="https://github.com/de110/MyPiano/assets/67581448/5ad96b77-bebd-4308-8d4c-755501843e56">
 
       - 음을 길게 지속시켜주는 역할로, Audio out이 2개라는 것을 고려해 하나의 음만 길게 지속되게 한다.
       - 댐퍼 페달이 True가 되면 피드백 루프를 통해서 volume이 0이 될 때까지 값을 1씩 감소시켜서 음을 길게 지속시켜주는 역할을 한다.
@@ -150,7 +151,7 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 
 6. 녹음
 </br>
-<img width="343" alt="7 녹음" src="https://github.com/de110/MyPiano/assets/67581448/5eb2b1b1-4d74-4fbd-bd30-d294326f5ae7">
+<img width="450" alt="7 녹음" src="https://github.com/de110/MyPiano/assets/67581448/5eb2b1b1-4d74-4fbd-bd30-d294326f5ae7">
 
       - 녹음 할 위치를 입력하고, Record 버튼이 True가 되면 입력한 키보드에 해당하는 불리언 값을 저장한다.
       - 36개의 불리언 값은 1과 0으로 바꾼 뒤 string으로 저장되고, text 형태로 저장된다.
@@ -158,8 +159,8 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 
 7. 재생
 </br>
-<img width="379" alt="8 재생_1" src="https://github.com/de110/MyPiano/assets/67581448/60c5f3f9-cdcc-450a-9b0e-821055ee9eaa">
-
+<img width="450" alt="8 재생_1" src="https://github.com/de110/MyPiano/assets/67581448/60c5f3f9-cdcc-450a-9b0e-821055ee9eaa">
+</br></br>
 <img width="250" alt="8 재생_2" src="https://github.com/de110/MyPiano/assets/67581448/154ee6ce-3ff2-4de7-ac4a-7bb4604aa5a4">
 
       - Play 버튼이 True가 되고 녹음된 위치를 입력하면 불러온 파일에 해당하는 string 값들이 열로 나온다.
