@@ -73,7 +73,7 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
     
         1) 녹음 저장 및 불러오기 파일 위치 지정
     
-    <img width="550" alt="Record_Save" src="https://user-images.githubusercontent.com/67581448/233928448-553dafd8-b5b6-4b73-a3b5-2d4236fd4170.png">
+    <img width="150" alt="Record_Save" src="https://user-images.githubusercontent.com/67581448/233928448-553dafd8-b5b6-4b73-a3b5-2d4236fd4170.png">
         
             - 녹음한 연주곡을 저장하고, 재생하기 위한 파일의 위치를 지정해준다.
         
