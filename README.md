@@ -73,9 +73,10 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
     
 1. 녹음 저장 및 불러오기 파일 위치 지정
     
-<img width="150" alt="Record_Save" src="https://user-images.githubusercontent.com/67581448/233928448-553dafd8-b5b6-4b73-a3b5-2d4236fd4170.png">
-        
+<img width="150" alt="Record_Save" src="https://user-images.githubusercontent.com/67581448/233928448-553dafd8-b5b6-4b73-a3b5-2d4236fd4170.png"></br>
+
         - 녹음한 연주곡을 저장하고, 재생하기 위한 파일의 위치를 지정해준다.
+        
         
 2. 녹음 시작 / 종료, 재생 버튼
         
@@ -96,21 +97,25 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 #### 2.2 Block Diagram
         
 1. 건반 입력
-
-<img width="550" alt="눌린_피아노_버튼" src="https://github.com/de110/MyPiano/assets/67581448/3383c351-8df7-4a8d-9a9f-b19cc1be449a">
+</br>
+<img width="750" height="100" alt="눌린_피아노_버튼" src="https://github.com/de110/MyPiano/assets/67581448/3383c351-8df7-4a8d-9a9f-b19cc1be449a">
 
       - 6by6 배열로 연결된 풀업 스위치는 Flat sequence를 사용하여 빠르게 전체 값를 읽어준다.
       - 풀업 스위치의 기본 값은 True여서 입력 값이 False일 때 출력 값을 확인한다.
 
-2. 옥타브
 
-<img width="550" alt="3 옥타브_0" src="https://github.com/de110/MyPiano/assets/67581448/93b040c1-f76a-4af9-bba8-05b670c5a1bd">
+
+2. 옥타브
+</br>
+<img width="800" height="100" alt="옥타브" src="https://github.com/de110/MyPiano/assets/67581448/93b040c1-f76a-4af9-bba8-05b670c5a1bd">
 
     - 스위치를 바꿀 때마다 바뀌는 값에 맞춰서 Default, 2100, 2400, 2700, 3000, 3200, 3300 까지 총 7개의 케이스를 둔다.
     - 2의 거듭제곱 연산을 통해서 옥타브를 조절한다. 
     - 각 배열의 첫번째 값은 다중 입력할 때 아무것도 눌리지 않았을 때의 주파수 값 0으로 지정한다.
+</br>
 
 3. 건반 다중 입력
+</br>
 
 <img width="224" alt="4 피아노_다중_입력" src="https://github.com/de110/MyPiano/assets/67581448/a2bd2cba-44a0-41b7-a7d1-3bd9f699af3e">
 <img width="160" alt="4 피아노_다중_입력2" src="https://github.com/de110/MyPiano/assets/67581448/c1d8c7e0-f485-4e29-a177-5605eb8999a2">
@@ -120,35 +125,42 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
       - 만약 True가 있다면, 새로운 배열에 해당하는 인덱스를 추가하고, False면 아무것도 하지 않는다.
       - 0번째 위치에 해당하는 해당하는 인덱스는 주파수1의 인덱스가 되고, 1번째 위치에 해당하는 인덱스는 주파수2의 인덱스가 된다. 
       - 주파수 배열에서 해당하는 인덱스 값을 찾아서 주파수1과 주파수 2에 각각 넣어준다.
+</br>
 
 4. 볼륨
-
+</br>
 <img width="119" alt="5 로터리_스위치1" src="https://github.com/de110/MyPiano/assets/67581448/74359366-3334-40fa-8293-5e4a637d7415">
 <img width="160" alt="5 로터리_스위치2" src="https://github.com/de110/MyPiano/assets/67581448/615f4ece-3bee-4947-a464-6f625105fe7a">
 
       - 로터리 음량 스위치로 받아온 값을 volume에 넣어준다. 값은 다음과 같다.
 
 <img width="136" alt="image" src="https://github.com/de110/MyPiano/assets/67581448/c7e07186-21ab-4832-b8fb-cc7f11c8149f">
+</br>
+</br>
+
 
 5. 댐퍼 페달
-    
+    </br>
 <img width="361" alt="6 댐퍼" src="https://github.com/de110/MyPiano/assets/67581448/5ad96b77-bebd-4308-8d4c-755501843e56">
 
       - 음을 길게 지속시켜주는 역할로, Audio out이 2개라는 것을 고려해 하나의 음만 길게 지속되게 한다.
       - 댐퍼 페달이 True가 되면 피드백 루프를 통해서 volume이 0이 될 때까지 값을 1씩 감소시켜서 음을 길게 지속시켜주는 역할을 한다.
       - 댐퍼 페달이 False가 되면 원래 음량에 해당하는 값을 volume에 넣어준다. 
+</br>
 
 6. 녹음
-
+</br>
 <img width="343" alt="7 녹음" src="https://github.com/de110/MyPiano/assets/67581448/5eb2b1b1-4d74-4fbd-bd30-d294326f5ae7">
 
       - 녹음 할 위치를 입력하고, Record 버튼이 True가 되면 입력한 키보드에 해당하는 불리언 값을 저장한다.
       - 36개의 불리언 값은 1과 0으로 바꾼 뒤 string으로 저장되고, text 형태로 저장된다.
+</br>
 
 7. 재생
-
-<img width="298" alt="8 재생_2" src="https://github.com/de110/MyPiano/assets/67581448/154ee6ce-3ff2-4de7-ac4a-7bb4604aa5a4">
+</br>
 <img width="379" alt="8 재생_1" src="https://github.com/de110/MyPiano/assets/67581448/60c5f3f9-cdcc-450a-9b0e-821055ee9eaa">
+
+<img width="250" alt="8 재생_2" src="https://github.com/de110/MyPiano/assets/67581448/154ee6ce-3ff2-4de7-ac4a-7bb4604aa5a4">
 
       - Play 버튼이 True가 되고 녹음된 위치를 입력하면 불러온 파일에 해당하는 string 값들이 열로 나온다.
       - 열로 나온 값은 행으로 전치 시키고 index array를 통해서 첫번째 행을 불러온다.
@@ -160,15 +172,15 @@ LabView 와 My Rio를 이용한 피아노 제작 팀 프로젝트
 #### 2.3 FPGA
 
 1. 주파수 계산 및 myRIO Audio out에 입력
+</br>
+<img width="307" alt="주파수" src="https://github.com/de110/MyPiano/assets/67581448/0b5b49a3-317b-45ab-89de-7c7f4401c2e9"> </br>
 
-    <img width="307" alt="주파수" src="https://github.com/de110/MyPiano/assets/67581448/0b5b49a3-317b-45ab-89de-7c7f4401c2e9"> </br>
 
-
-      <img width="300" alt="image" src="https://github.com/de110/MyPiano/assets/67581448/9b7372ff-ba3f-48c8-bb92-a0843d982c24">
+<img width="300" alt="image" src="https://github.com/de110/MyPiano/assets/67581448/9b7372ff-ba3f-48c8-bb92-a0843d982c24">
 
 
 2. 버튼 입력
-
+</br>
 <img width="292" alt="버튼" src="https://github.com/de110/MyPiano/assets/67581448/7b25cb59-1467-48f0-9925-5e099ea3afe3">
 
       - ConnectorA 0~5: 피아노 출력
